@@ -1,1 +1,15 @@
-<app-nav></app-nav>
+<header
+  #header
+  class="bg-[url(https://drive.google.com/thumbnail?id=1kH-8SvYzcz9zFq6Nh8XdJkAy2PhSj9cV&sz=w1024)] p-10"
+>
+  <img
+    class="mx-auto my-5"
+    src="https://drive.google.com/thumbnail?id=1OErnqsROTSePGWcRDZAgKd9Tluwt4qGD&sz=h128"
+    alt="Weirdo"
+  />
+
+  <p class="text-right">
+    Copyright &copy; {{ year }} by Weirdo Productions. All rights reserved.
+  </p>
+</header>
+<app-nav [headerElement]="header"></app-nav>

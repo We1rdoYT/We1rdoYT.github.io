@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DateService } from '../date.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  public readonly year: number;
+
+  public constructor(private readonly dateService: DateService) {
+    this.year = dateService.year;
+  }
+}

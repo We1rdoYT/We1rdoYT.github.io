@@ -1,13 +1,14 @@
-<nav class="navbar">
-  <div class="navbar-left flex gap-5">
-    <button class="btn btn-primary">Home</button>
-    <button class="btn btn-primary">Directory</button>
+<nav class="navbar bg-neutral sticky top-0 h-20 p-5">
+  @if (visible) {
+    <div class="navbar-start">
+      <img
+        src="https://drive.google.com/thumbnail?id=1OErnqsROTSePGWcRDZAgKd9Tluwt4qGD&sz=h40"
+        alt="Weirdo"
+      />
+    </div>
+  }
+  <div [class]="[visible ? 'navbar-end' : 'navbar-start', 'gap-5']">
+    <button class="btn btn-accent" routerLink="">Home</button>
+    <button class="btn btn-accent" routerLink="directory">Directory</button>
   </div>
-  <div class="navbar-center">
-    <img
-      src="https://drive.google.com/thumbnail?id=1OErnqsROTSePGWcRDZAgKd9Tluwt4qGD"
-      alt="Weirdo"
-    />
-  </div>
-  <div class="navbar-end"></div>
 </nav>
