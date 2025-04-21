@@ -1,3 +1,35 @@
-<p class="h-96">home works!</p>
-<p class="h-96">home works!</p>
-<p class="h-96">home works!</p>
+<section>
+  <h1>Welcome to the official Weirdo website!</h1>
+</section>
+<section class="bg-base-300">
+  <h2>Check out our useful links.</h2>
+  <button class="btn btn-primary" routerLink="directory">Directory</button>
+</section>
+<section>
+  <h2>Weirdo Creations</h2>
+  <a href="https://github.com/We1rdoYT/Creations" target="_blank">
+    <button class="btn btn-secondary">Creations</button>
+  </a>
+</section>
+<section class="bg-base-300">
+  <h2>Featured Creations</h2>
+  <ul class="p-0">
+    @for (creation of creations; track $index) {
+      <li class="list-none p-0">
+        @if (creation.link.startsWith("https://")) {
+          <a [href]="creation.link" target="_blank"
+            ><fa-icon class="mr-5" [icon]="creation.icon" />{{
+              creation.site
+            }}</a
+          >
+        } @else {
+          <a [routerLink]="creation.link"
+            ><fa-icon class="mr-5" [icon]="creation.icon" />{{
+              creation.site
+            }}</a
+          >
+        }
+      </li>
+    }
+  </ul>
+</section>

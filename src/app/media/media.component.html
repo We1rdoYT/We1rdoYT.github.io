@@ -1,0 +1,27 @@
+<section>
+  <div class="border-primary rounded-lg border-8">
+    @switch (type) {
+      @case ("aud") {
+        <audio controls>
+          <source [src]="'media/' + file" />
+          Your browser does not support the audio element.
+        </audio>
+      }
+      @case ("img") {
+        <img [src]="'media/' + file" [alt]="file" />
+      }
+      @case ("vid") {
+        <video controls>
+          <source [src]="'media/' + file" />
+          Your browser does not support the video tag.
+        </video>
+      }
+      @case ("roll") {
+        <video autoplay>
+          <source [src]="'media/' + file" />
+          Your browser does not support the video tag.
+        </video>
+      }
+    }
+  </div>
+</section>

@@ -1,10 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { DateService } from '../date.service';
 import { NavComponent } from '../nav/nav.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [NavComponent],
+  imports: [NgOptimizedImage, NavComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

@@ -1,1 +1,12 @@
-<p>directory works!</p>
+<section>
+  <h1>Directory</h1>
+  <ul class="mx-auto my-20 p-0">
+    @for (link of links; track $index) {
+      <li class="list-none p-0 text-2xl">
+        <a [href]="link.link" target="_blank"
+          ><fa-icon class="mr-5" [icon]="link.icon" />{{ link.site }}</a
+        >
+      </li>
+    }
+  </ul>
+</section>
