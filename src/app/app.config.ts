@@ -7,6 +7,7 @@ import {
   provideRouter,
   RouterStateSnapshot,
   TitleStrategy,
+  withViewTransitions,
 } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -28,7 +29,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideRouter(routes, withViewTransitions()),
     { provide: TitleStrategy, useClass: TemplatePageTitleStrategy },
   ],
 };
