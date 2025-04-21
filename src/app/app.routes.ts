@@ -17,6 +17,7 @@ export const routes: Routes = [
   },
   {
     path: 'media/:type/:file',
+    title: 'Media',
     component: MediaComponent,
   },
   {

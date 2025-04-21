@@ -3,16 +3,26 @@
     @switch (type) {
       @case ("aud") {
         <audio controls>
-          <source [src]="'media/' + file" />
+          <source
+            [src]="'media/' + file"
+            (error)="router.navigate(['pagenotfound'])"
+          />
           Your browser does not support the audio element.
         </audio>
       }
       @case ("img") {
-        <img [src]="'media/' + file" [alt]="file" />
+        <img
+          [src]="'media/' + file"
+          [alt]="file"
+          (error)="router.navigate(['pagenotfound'])"
+        />
       }
       @case ("vid") {
         <video controls>
-          <source [src]="'media/' + file" />
+          <source
+            [src]="'media/' + file"
+            (error)="router.navigate(['pagenotfound'])"
+          />
           Your browser does not support the video tag.
         </video>
       }

@@ -14,7 +14,7 @@ export class MediaComponent {
 
   public constructor(
     private readonly route: ActivatedRoute,
-    private readonly router: Router,
+    public readonly router: Router,
   ) {
     this.type = route.snapshot.paramMap.get('type') as string;
     this.file = route.snapshot.paramMap.get('file') as string;

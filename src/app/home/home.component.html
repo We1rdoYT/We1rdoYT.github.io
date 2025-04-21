@@ -14,18 +14,18 @@
 <section class="bg-base-300">
   <h2>Featured Creations</h2>
   <ul class="p-0">
-    @for (creation of creations; track $index) {
+    @for (featured_creation of featured_creations; track $index) {
       <li class="list-none p-0">
-        @if (creation.link.startsWith("https://")) {
-          <a [href]="creation.link" target="_blank"
-            ><fa-icon class="mr-5" [icon]="creation.icon" />{{
-              creation.site
+        @if (featured_creation.link.startsWith("https://")) {
+          <a [href]="featured_creation.link" target="_blank"
+            ><fa-icon class="mr-5" [icon]="featured_creation.icon" />{{
+              featured_creation.site
             }}</a
           >
         } @else {
-          <a [routerLink]="creation.link"
-            ><fa-icon class="mr-5" [icon]="creation.icon" />{{
-              creation.site
+          <a [routerLink]="featured_creation.link"
+            ><fa-icon class="mr-5" [icon]="featured_creation.icon" />{{
+              featured_creation.site
             }}</a
           >
         }
